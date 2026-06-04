@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>At The Gate — Command Flashcards</title>
+<meta name="description" content="Offline command-prep flashcards." />
+<meta name="theme-color" content="#bf4d2e" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="At The Gate" />
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAE6UlEQVR4nO3dMU4bQRSH8Wcrh+AEFCmQoEaRnD51etc5Tmr61PRBiqixxCl8C1INGPDaO7uzM+/95/u1kbzj8cfL2GvEyhx4+HH10noNKGNz/7xqef0mFyfgftQOvNrFiBg14l70AkSMIUvFvciDEjLGKh32uuSDmREz8pTupdhPByFjrhLTusiEJmaUUKKjWT8RhIylTJ3Wkyc0MWNJU/uaFDQxo4YpnWUHTcyoKbe3rKCJGS3kdDc6aGJGS2P7GxU0McODMR2eDZqY4cm5Hovf+gZaOhk00xkenepyMGhihmdDfXLkgJSjQTOdEcGxTj8FTcyI5GOvHDkg5V3QTGdEdNgtExpSCBpSXoPmuIHIUr9MaEghaEhZmXHcgA4mNKQQNKQQNKSsOT9DCRMaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUggaUr60XkCu2z9/Wy8hnMef31svoZpVlK+PEvJ8PYTtPmhCLk85bNdnaGJehvK+ug1aedM9UN1fl0GrbrY3ivvsMmhgKndBK04Nz9T2213QwByuglabFlEo7buroIG5CBpSCBpSCBpSCBpSCBpSwn0fGsvY7vaD/3Z3fVFxJfMwoXHWdrc/GbwnBI3RIoQtc+Q4/NK60p0vj7a7vdtjiMSE/vgbGMq/keGF10kdPuiheIl6eR6jDh80cIigMYu3KR0+6KE3gLwx7FP4oM0+x0vMdXma0jIf2xExzEQmNJAQNKQQNKQQNKTIvCkc4+n3TZPr3vx6anLdHnUzoVvF3PravekiaA9BeVhDD7oIGv3oImgPZ1gPa+hBF0GbtQ2KmOvp6lMOwtLXzYRGHwgaUggaUggaUmTeFG6+3bZewmIe/j22XkIYEhNaOWYz/edXUvige3mxe3mec4UPGjgUPuhezpe9PM+5wgdtpv9iqz+/kmQ+5eBFh5nIhAYSgoYUgoYUgoYUmTeFLW888IbUD4kJ3fouWuvr4034oL3E5GUdvQsfNHAofNBezq9e1tG78EGbtY+p9fXxRuZTDqKCmciEBhKChhRXQfPHMtu4vPzaegnFuAoamMtd0EzpupSms5nDoIE5XAbNlK5DbTqbOQ3ajKiXphizmeOgzYh6KaoxmwW4U5ii5k8fz6cccuI+6ISwp+sh5CRM0MmpY8h2t6+4Enjk+gwN5CJoSCFoSCFoSCFoSCFoSJEK+u76ovUSuuRp36WCBuSC9jQteuBtv+WCRt8kg/Y2NVR53GfJoM18brYSr/srG7SZ302PzvO+hvu2Xa60+XwTbz7PISfyQSeEPV2EkJNugk4ivTjIJ32GRn8IGlIIGlIIGlIIGlIIGlIIGlIIGlIIGlIIGlIIGlIIGlIIGlLWm/vnVetFAKUwoSGFoCGFoCFlbWbGORoKNvfPKyY0pBA0pLwGzbEDkaV+mdCQQtCQ8i5ojh2I6LBbJjSkfAqaKY1IPvZ6dEITNSI41ilHDkgZDJopDc+G+jw5oYkaHp3qkiMHpJwNmikNT871OGpCEzU8GNPh6CMHUaOlsf1lnaGJGi3kdJf9ppCoUVNub5M+5SBq1DCls8kf2xE1ljS1ryJRPvy4einxOMDcQVnkxgrTGiWU6Kh4iExr5Co5EIvf+mZaI0fpXhaNj2mNIUsNvmrTlLhR43/vJscD4u5H7SPof47iUL2hNPaDAAAAAElFTkSuQmCC" />
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAFYUlEQVR4nO3bPU4jQRCG4TLaQ3ACgg2QIEYrmXxjcuI9zsbkxOQgrYhB4hTcgo2MBuz58/R0V9X3PimS3Z6p1z1j44058/T7/KP1GrCu7cPbpvUadpouhGHHTqsoqj8pQ48xNWOo9kQMPuaqEcLqT8DgY6k1Q1jtgRl8lLZGCMUfkMHH2kqGcFLqgcwYftRRcs6KlMTgo5Wlu8HiHYDhR0tL529RAAw/PFgyh0cHwPDDk2Pn8agAGH54dMxczg6A4Ydnc+dzVgAMPyKYM6eTA2D4EcnUeZ0UAMOPiKbM7WgADD8iG5vfov8KAUQzGADv/shgaI57A2D4kUnfPHMJBGkHA+DdHxkdmmt2AEjbC4B3f2T2fb7ZASDtSwC8+0NBd87ZASDtMwDe/aFkN+/sAJBGAJC2MePyB7rYASCNACCNACCNACDthBtgKGMHgDQCgDQCgDQCgDQCgDQCgDQCgDQCgDQCgDQCgDQCgDQCgDQCgLQfrRewxNX9Y+slhPd8c916CU1tov07NEO/HsUYQl0CMfzrUjy+YQJQPDktqB3nEAGonZTWlI63+wCUToYnKsfddQAqJ8ErhePvNgCFgx9B9vPgNgCgBgKANJcBZN92o8l8PlwGANRCAJBGAJBGAJBGAJBGAJBGAJAW+hdhqOf29X3w73cXp5VWUhYBoIhuIJFiSBlA96d9mb/F9Or29T1MBOnuAb7/rlXxd64ejF0yeZEqgL5hJ4I2IkSQKgD44z0CAsDqPEdAAKjCawSpAuj7xIdPgtAnVQBm+8PO8GNIyu8BGHqfPH4/kG4HAOYgAEgjAEgjAEhLeRM81cvfy6bPf/nnpenzQ3gHaD38XtagTjIAT4PnaS2KJAMAdggA0ggA0iQD8PTpi6e1KJIMwMzH4HlYgzrp7wEYQMjuAIAZAUAcAUBaynuA7a+r1kuo5unfc+slhJZuB1AafjO911taqgBUh0H1dZeQKgBgLgKAtFQBqN4Qqr7uElIFYKY3DGqvt7SUH4MyFJgq3Q4AzEEAkEYAkEYAkJbyJtjDN6PciMeQbgfwMPxmftaBYakC8DZ03taDfakCAOYiAEhLFYC3G09v68G+VAGY+Rk6L+vAsJQfgzJ8mMrlDvB8c916Ceg4O/vZegmrcRkAUAsBQJrbALgM8iHz5Y+Z4wDMiKC17MNv5jwAMyJoRWH4zQIEYEYEtakMv1mQAMyIoBal4TcLFIAZEaxNbfjNAn4T3I3g6v6x4UpyUBz6rnABdI3tCLev75VWgqhCXQIBpREApBEApBEApBEApBEApBEApKUO4O7itPUS0OHxfKQOABhDAJCWPgCP264ir+chfQBmfg++Cs/HXyIAM98nITPvx10mADP/JyObCMdbKgCzGCclgyjHWS4AszgnJ6pIxzf0D2KW6J4kfjizXKSh75INoCvqycNykpdAwA4BQBoBQBoBQBoBQBoBQBoBQBoBQBoBQBoBQBoBQBoBQBoBQNrJ9uFt03oRQCvsAJBGAJBGAJBGAJB2YmbGjTAUbR/eNuwAkEYAkPYZAJdBULKbd3YASPsSALsAFHTnnB0A0vYCYBdAZt/nmx0A0g4GwC6AjA7NNTsApPUGwC6ATPrmeXAHIAJkMDTHXAJB2mgA7AKIbGx+J+0ARICIpszt5EsgIkAkU+d11j0AESCCOXM6+yaYCODZ3Pk86lMgIoBHx8zl0R+DEgE8OXYeF30PQATwYMkcLv4ijAjQ0tL5Kzq8T7/PP0o+HtCn1Btv0X+FYDdADSXnbLWBZTdAaWu8wa7+jk0IWGrNK4tqlyyEgLlqXFJXv2YnBIypeS/Z9KaVGLDT6gOU/5U+Yb+3PAJbAAAAAElFTkSuQmCC" />
+<link rel="manifest" href="./manifest.webmanifest" />
+<style>
+  :root {
+    --paper:#f3ead9; --paper-2:#ece0c9; --ink:#211c16; --ink-soft:#5c5347; --line:#d8c8aa;
+    --accent:#bf4d2e; --accent-deep:#9a3a20; --green:#3f6b4a; --gold:#c98a1e;
+    --card-front:#fbf6ec; --card-back:#2a2620; --shadow:0 18px 40px -18px rgba(33,28,22,.45); --radius:18px;
+    --font-display:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html, body { margin:0; }
+  body {
+    font-family:var(--font-ui); color:var(--ink);
+    background:
+      radial-gradient(120% 80% at 15% 0%, #f7efe0 0%, rgba(247,239,224,0) 60%),
+      radial-gradient(120% 90% at 100% 100%, #efe3cd 0%, rgba(239,227,205,0) 55%),
+      var(--paper);
+    min-height:100vh; -webkit-font-smoothing:antialiased;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  body::before { content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .wrap { position:relative; z-index:1; max-width:880px; margin:0 auto; padding:18px 18px 60px; }
+  header.top { display:flex; align-items:flex-end; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-bottom:14px; }
+  .brand h1 { font-family:var(--font-display); font-weight:600; font-size:clamp(25px,6vw,38px); margin:0; line-height:1; letter-spacing:-.3px; }
+  .brand h1 .dot { color:var(--accent); }
+  .brand p { margin:6px 0 0; color:var(--ink-soft); font-size:13px; max-width:560px; }
+  nav.tabs { display:flex; gap:6px; background:rgba(255,255,255,.4); border:1px solid var(--line); padding:5px; border-radius:999px; }
+  nav.tabs button { font-family:inherit; font-weight:600; font-size:14px; border:none; background:transparent; color:var(--ink-soft); padding:9px 15px; border-radius:999px; cursor:pointer; }
+  nav.tabs button.active { background:var(--ink); color:var(--paper); box-shadow:var(--shadow); }
+  .banner { border-radius:12px; padding:11px 14px; font-size:13.5px; margin-bottom:14px; display:flex; gap:10px; align-items:flex-start; }
+  .banner.info { background:#eef5ec; border:1px solid #bcd0bd; color:#2f4a36; }
+  .banner.warn { background:#fdf3df; border:1px solid var(--gold); color:#7a5a14; }
+  .banner.err { background:#fbeae3; border:1px solid #eccabc; color:#7a2a16; }
+  .banner button.x { margin-left:auto; background:transparent; border:none; font-size:18px; cursor:pointer; color:inherit; line-height:1; }
+  .panel { background:rgba(255,255,255,.45); border:1px solid var(--line); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); }
+  h2.section { font-family:var(--font-display); font-weight:600; font-size:21px; margin:0 0 4px; }
+  h3.sub { font-family:var(--font-display); font-weight:600; font-size:16px; margin:20px 0 6px; }
+  .muted { color:var(--ink-soft); font-size:14px; }
+  .btn { font-family:inherit; font-weight:600; font-size:15px; border-radius:12px; cursor:pointer; transition:.16s; border:1px solid transparent; padding:11px 18px; }
+  .btn-primary { background:var(--accent); color:#fff; } .btn-primary:active { background:var(--accent-deep); }
+  .btn-ghost { background:transparent; border-color:var(--line); color:var(--ink); }
+  .btn-dark { background:var(--ink); color:var(--paper); }
+  .btn:disabled { opacity:.4; } .btn-sm { padding:7px 12px; font-size:13px; border-radius:9px; }
+  .chips { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 4px; }
+  .chip { border:1px solid var(--line); background:var(--card-front); border-radius:12px; padding:10px 14px; cursor:pointer; display:flex; align-items:center; gap:9px; font-weight:600; font-size:14px; user-select:none; }
+  .chip.sel { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+  .chip .count { font-size:12px; font-weight:500; opacity:.7; }
+  .row { display:flex; align-items:center; gap:12px; flex-wrap:wrap; } .spread { justify-content:space-between; }
+  .mt { margin-top:18px; } .mt-s { margin-top:10px; }
+  .toggle { display:flex; align-items:center; gap:9px; cursor:pointer; font-weight:600; font-size:14px; }
+  .toggle input { width:0; height:0; opacity:0; position:absolute; }
+  .track { width:42px; height:24px; border-radius:999px; background:var(--line); position:relative; transition:.18s; }
+  .track::after { content:""; position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:#fff; transition:.18s; box-shadow:0 1px 3px rgba(0,0,0,.2); }
+  .toggle input:checked + .track { background:var(--green); }
+  .toggle input:checked + .track::after { transform:translateX(18px); }
+  .study-bar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; flex-wrap:wrap; }
+  .progress-wrap { flex:1; min-width:150px; }
+  .progress-track { height:8px; background:var(--paper-2); border-radius:999px; overflow:hidden; border:1px solid var(--line); }
+  .progress-fill { height:100%; background:linear-gradient(90deg,var(--accent),var(--gold)); width:0%; transition:width .3s; }
+  .score-pills { display:flex; gap:8px; font-weight:700; font-size:13px; }
+  .pill { padding:5px 11px; border-radius:999px; border:1px solid var(--line); }
+  .pill.good { color:var(--green); background:#eef5ec; border-color:#bcd0bd; }
+  .pill.bad { color:var(--accent-deep); background:#fbeae3; border-color:#eccabc; }
+  .flashcard { perspective:1800px; margin:4px 0 16px; }
+  .flip-inner { position:relative; width:100%; min-height:clamp(340px,58vh,560px); transform-style:preserve-3d; transition:transform .55s cubic-bezier(.4,.2,.2,1); cursor:pointer; }
+  .flashcard.flipped .flip-inner { transform:rotateY(180deg); }
+  .face { position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+  .face .tag { position:absolute; top:15px; left:18px; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; z-index:2; }
+  .face .chap { position:absolute; top:15px; right:18px; font-size:12px; font-weight:600; z-index:2; }
+  .face .hint { position:absolute; bottom:12px; left:0; right:0; text-align:center; font-size:12px; opacity:.55; font-weight:600; z-index:2; }
+  .scrollarea { position:absolute; left:0; right:0; top:42px; bottom:34px; overflow-y:auto; padding:8px 24px; -webkit-overflow-scrolling:touch; }
+  .front { background:var(--card-front); border:1px solid var(--line); }
+  .front .tag { color:var(--accent); } .front .chap { color:var(--ink-soft); }
+  .front .scrollarea { display:flex; }
+  .front .q { margin:auto; text-align:center; font-family:var(--font-display); font-weight:600; font-size:clamp(19px,4.6vw,26px); line-height:1.32; }
+  .back { background:var(--card-back); color:#f3ead9; transform:rotateY(180deg); border:1px solid #000; }
+  .back .tag { color:var(--gold); } .back .hint { color:#f3ead9; }
+  .back .scrollarea { text-align:left; }
+  .back .a { white-space:pre-wrap; font-size:14.5px; line-height:1.55; }
+  .session-actions { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+  .nav-mini { display:flex; gap:8px; justify-content:center; margin-top:12px; }
+  .kbd-hint { text-align:center; font-size:12px; color:var(--ink-soft); margin-top:10px; }
+  .endcard { text-align:center; padding:14px 6px; }
+  .endcard .big { font-family:var(--font-display); font-size:clamp(40px,8vw,64px); font-weight:600; line-height:1; }
+  .endcard .big small { font-size:.4em; color:var(--ink-soft); font-weight:500; }
+  .static-list { list-style:none; margin:8px 0 0; padding:0; }
+  .static-list li { display:flex; justify-content:space-between; gap:10px; padding:9px 12px; border:1px solid var(--line); border-radius:10px; background:rgba(255,255,255,.4); margin-bottom:8px; font-weight:600; font-size:14px; }
+  .static-list li .count { color:var(--ink-soft); font-weight:500; }
+  .qa { display:flex; gap:10px; align-items:flex-start; padding:9px 0; border-bottom:1px dashed var(--line); }
+  .qa:last-child { border-bottom:none; } .qa .txt { flex:1; font-size:14px; } .qa .txt b { font-weight:600; }
+  .qa .txt .ans { color:var(--ink-soft); display:block; margin-top:2px; white-space:pre-wrap; max-height:60px; overflow:hidden; -webkit-mask-image:linear-gradient(180deg,#000 60%,transparent); }
+  input.fld, textarea.fld { font-family:inherit; font-size:16px; width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#fff; color:var(--ink); }
+  textarea.fld { resize:vertical; min-height:46px; line-height:1.5; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media (max-width:560px){ .grid2{ grid-template-columns:1fr; } }
+  .hidden { display:none !important; }
+  .empty { text-align:center; padding:30px 10px; color:var(--ink-soft); } .empty .ic { font-size:38px; }
+  .codehint { font-family:ui-monospace,monospace; background:#fff; border:1px solid var(--line); border-radius:8px; padding:8px 10px; font-size:12.5px; color:var(--ink-soft); white-space:pre-line; }
+  .spin { width:22px; height:22px; border:3px solid var(--line); border-top-color:var(--accent); border-radius:50%; animation:sp 1s linear infinite; display:inline-block; vertical-align:middle; }
+  @keyframes sp { to { transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>At The Gate<span class="dot">.</span></h1>
+      <p id="subtitle">Towards Command. Works offline once installed; chapters load from the site.</p>
+    </div>
+    <nav class="tabs">
+      <button id="tab-study" class="active" onclick="showView('study')">Study</button>
+      <button id="tab-manage" onclick="showView('manage')">Chapters</button>
+    </nav>
+  </header>
+
+  <div id="installBanner" class="banner info hidden">
+    <span id="installText"></span>
+    <button class="x" onclick="dismissInstall()" aria-label="dismiss">×</button>
+  </div>
+  <div id="errBanner" class="banner err hidden"></div>
+
+  <section id="view-setup" class="panel">
+    <h2 class="section">Pick what to study</h2>
+    <p class="muted">Choose one or more chapters, or just start to draw from everything.</p>
+    <div id="chapterChips" class="chips"></div>
+    <div class="row spread mt">
+      <label class="toggle"><input type="checkbox" id="shuffleToggle" checked /><span class="track"></span>Shuffle order (random)</label>
+      <div class="row">
+        <button class="btn btn-ghost btn-sm" onclick="selectAllChapters(true)">Select all</button>
+        <button class="btn btn-ghost btn-sm" onclick="selectAllChapters(false)">Clear</button>
+      </div>
+    </div>
+    <div class="row mt" style="justify-content:flex-end;">
+      <span id="setupCount" class="muted" style="margin-right:auto;"></span>
+      <button class="btn btn-primary" id="startBtn" onclick="startSession()">Start studying →</button>
+    </div>
+  </section>
+
+  <section id="view-session" class="panel hidden">
+    <div class="study-bar">
+      <button class="btn btn-ghost btn-sm" onclick="exitSession()">← Exit</button>
+      <div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
+      <div class="score-pills"><span class="pill good">✓ <span id="scoreGood">0</span></span><span class="pill bad">✗ <span id="scoreBad">0</span></span></div>
+    </div>
+    <div class="muted" id="cardCounter" style="text-align:center; margin-bottom:6px;"></div>
+    <div class="flashcard" id="flashcard" onclick="flipCard()">
+      <div class="flip-inner">
+        <div class="face front">
+          <span class="tag">Question</span><span class="chap" id="cardChapter"></span>
+          <div class="scrollarea"><div class="q" id="cardQ"></div></div>
+          <span class="hint">Tap to flip</span>
+        </div>
+        <div class="face back">
+          <span class="tag">Answer</span>
+          <div class="scrollarea"><div class="a" id="cardA"></div></div>
+          <span class="hint">Scroll if needed · how did you do?</span>
+        </div>
+      </div>
+    </div>
+    <div class="session-actions">
+      <button class="btn btn-ghost" onclick="grade(false)">✗ Missed</button>
+      <button class="btn btn-dark" onclick="grade(true)">✓ Got it</button>
+    </div>
+    <div class="nav-mini">
+      <button class="btn btn-ghost btn-sm" onclick="prevCard()">‹ Prev</button>
+      <button class="btn btn-ghost btn-sm" onclick="nextCard()">Skip ›</button>
+    </div>
+    <div class="kbd-hint">Space flip · 1 missed · 2 got it · ← → navigate</div>
+  </section>
+
+  <section id="view-end" class="panel hidden">
+    <div class="endcard">
+      <div class="big"><span id="endPct">0</span><small>%</small></div>
+      <p class="muted" id="endLine" style="font-size:16px;"></p>
+      <div class="row" style="justify-content:center;" id="endButtons"></div>
+    </div>
+  </section>
+
+  <section id="view-manage" class="panel hidden">
+    <h2 class="section">Chapters</h2>
+    <p class="muted">Study chapters are loaded from the site's <code>chapters/</code> folder. To add a chapter, drop a new JSON file in there and list it in <code>index.json</code> — no app changes needed.</p>
+    <ul id="staticList" class="static-list"></ul>
+
+    <h3 class="sub">My cards (saved on this device)</h3>
+    <p class="muted">Optional personal cards. These stay on this device only and are not part of the shared site content.</p>
+    <div id="localCards" class="mt-s"></div>
+    <div class="grid2 mt-s">
+      <textarea class="fld" id="q-local" placeholder="Question"></textarea>
+      <textarea class="fld" id="a-local" placeholder="Answer"></textarea>
+    </div>
+    <div class="row mt-s">
+      <button class="btn btn-dark btn-sm" onclick="addLocalCard()">+ Add my card</button>
+      <button class="btn btn-ghost btn-sm" onclick="clearLocal()">Clear my cards</button>
+    </div>
+    <details class="mt-s">
+      <summary style="cursor:pointer; font-weight:600; font-size:13.5px; color:var(--ink-soft);">Bulk paste my cards</summary>
+      <div class="mt-s codehint">One card per line:  question | answer
+OR blocks of:  Q: your question  /  A: your answer</div>
+      <textarea class="fld mt-s" id="bulk-local" placeholder="What is X? | The answer"></textarea>
+      <div class="row mt-s"><button class="btn btn-primary btn-sm" onclick="bulkLocal()">Import</button></div>
+    </details>
+  </section>
+</div>
+
+<script>
+const LOCAL_KEY = "atg_local_v1";
+let canonicalChapters = [];
+let localChapter = { id:"local", name:"My Cards (this device)", cards:[] };
+let deck = { chapters:[] };
+let isLoading = true, loadError = false;
+
+function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
+async function fetchJSON(url){ const r = await fetch(url, {cache:"no-cache"}); if(!r.ok) throw new Error("HTTP "+r.status); return r.json(); }
+function normalizeChapter(ch){
+  return { id: ch.id||uid(), name: ch.name||"Untitled chapter",
+           cards: (ch.cards||[]).filter(c=>c&&c.q&&c.a).map(c=>({ id:c.id||uid(), q:c.q, a:c.a })) };
+}
+async function loadAll(){
+  isLoading = true; loadError = false; refreshCurrentView();
+  try {
+    const idx = await fetchJSON("./chapters/index.json");
+    const files = Array.isArray(idx) ? idx : (idx.chapters || []);
+    const chs = [];
+    for (const f of files){
+      const file = typeof f === "string" ? f : (f.file || "");
+      if (!file) continue;
+      try { const ch = await fetchJSON("./chapters/" + file); if (ch && Array.isArray(ch.cards)) chs.push(normalizeChapter(ch)); }
+      catch(e){ console.warn("Couldn't load chapter:", file, e); }
+    }
+    canonicalChapters = chs;
+    loadError = chs.length === 0;
+  } catch(e){
+    canonicalChapters = []; loadError = true;
+    console.warn("Couldn't load chapter index:", e);
+  }
+  loadLocal(); rebuildDeck(); isLoading = false;
+  if (loadError) showErr("Couldn't load the chapters. If you're opening the file directly, host it (e.g. GitHub Pages) and open the live link — chapters load over the web. Once loaded, it works offline.");
+  else hideErr();
+  refreshCurrentView();
+}
+function rebuildDeck(){
+  deck = { chapters: [...canonicalChapters, ...(localChapter.cards.length ? [localChapter] : [])] };
+}
+function loadLocal(){
+  try { const raw = localStorage.getItem(LOCAL_KEY); if(raw){ const o=JSON.parse(raw); localChapter={ id:"local", name:"My Cards (this device)", cards:Array.isArray(o.cards)?o.cards:[] }; } }
+  catch(e){ localChapter = { id:"local", name:"My Cards (this device)", cards:[] }; }
+}
+function saveLocal(){ try { localStorage.setItem(LOCAL_KEY, JSON.stringify({cards:localChapter.cards})); } catch(e){} }
+
+function showErr(m){ const b=document.getElementById("errBanner"); b.textContent=m; b.classList.remove("hidden"); }
+function hideErr(){ document.getElementById("errBanner").classList.add("hidden"); }
+
+function showView(tab){
+  document.getElementById("tab-study").classList.toggle("active", tab==="study");
+  document.getElementById("tab-manage").classList.toggle("active", tab==="manage");
+  ["setup","session","end","manage"].forEach(v=>document.getElementById("view-"+v).classList.add("hidden"));
+  if (tab==="study"){ renderSetup(); document.getElementById("view-setup").classList.remove("hidden"); }
+  else { renderManage(); document.getElementById("view-manage").classList.remove("hidden"); }
+}
+function refreshCurrentView(){
+  if (!document.getElementById("view-setup").classList.contains("hidden")) renderSetup();
+  if (!document.getElementById("view-manage").classList.contains("hidden")) renderManage();
+}
+
+let selectedChapters = new Set();
+function renderSetup(){
+  const box=document.getElementById("chapterChips"); box.innerHTML="";
+  if (isLoading){ box.innerHTML=`<div class="empty" style="width:100%"><span class="spin"></span> &nbsp;Loading chapters…</div>`; document.getElementById("startBtn").disabled=true; document.getElementById("setupCount").textContent=""; return; }
+  if (deck.chapters.length===0 || totalCards()===0){
+    box.innerHTML=`<div class="empty" style="width:100%"><div class="ic">🗂️</div>No cards available yet.</div>`;
+    document.getElementById("startBtn").disabled=true; document.getElementById("setupCount").textContent=""; return;
+  }
+  selectedChapters = new Set([...selectedChapters].filter(id=>deck.chapters.some(c=>c.id===id)));
+  deck.chapters.forEach(ch=>{
+    const el=document.createElement("div"); el.className="chip"+(selectedChapters.has(ch.id)?" sel":"");
+    el.innerHTML=`${escapeHtml(ch.name)} <span class="count">${ch.cards.length}</span>`;
+    el.onclick=()=>{ selectedChapters.has(ch.id)?selectedChapters.delete(ch.id):selectedChapters.add(ch.id); renderSetup(); };
+    box.appendChild(el);
+  });
+  document.getElementById("startBtn").disabled=false; updateSetupCount();
+}
+function selectAllChapters(all){ selectedChapters=new Set(all?deck.chapters.map(c=>c.id):[]); renderSetup(); }
+function activeCards(){
+  const chs = selectedChapters.size ? deck.chapters.filter(c=>selectedChapters.has(c.id)) : deck.chapters;
+  const out=[]; chs.forEach(ch=>ch.cards.forEach(card=>out.push({...card, chapter:ch.name}))); return out;
+}
+function totalCards(){ return deck.chapters.reduce((n,c)=>n+c.cards.length,0); }
+function updateSetupCount(){
+  const n=activeCards().length; const label=selectedChapters.size?`${selectedChapters.size} chapter(s)`:"all chapters";
+  document.getElementById("setupCount").textContent=`${n} card${n!==1?"s":""} from ${label}`;
+}
+
+let session=null;
+function startSession(){
+  let cards=activeCards(); if(!cards.length) return;
+  if (document.getElementById("shuffleToggle").checked) cards=shuffle(cards.slice());
+  session={ cards, i:0, flipped:false, results:{} };
+  document.getElementById("view-setup").classList.add("hidden");
+  document.getElementById("view-end").classList.add("hidden");
+  document.getElementById("view-session").classList.remove("hidden");
+  renderCard();
+}
+function renderCard(){
+  if(!session) return; const c=session.cards[session.i];
+  document.getElementById("cardQ").textContent=c.q;
+  document.getElementById("cardA").textContent=c.a;
+  document.getElementById("cardChapter").textContent=c.chapter||"";
+  session.flipped=false; document.getElementById("flashcard").classList.remove("flipped");
+  document.querySelectorAll(".scrollarea").forEach(s=>s.scrollTop=0);
+  document.getElementById("cardCounter").textContent=`Card ${session.i+1} of ${session.cards.length}`;
+  const graded=Object.keys(session.results).length;
+  document.getElementById("progressFill").style.width=(graded/session.cards.length*100)+"%";
+  let good=0,bad=0; Object.values(session.results).forEach(v=>v?good++:bad++);
+  document.getElementById("scoreGood").textContent=good; document.getElementById("scoreBad").textContent=bad;
+}
+function flipCard(){ if(!session) return; session.flipped=!session.flipped; document.getElementById("flashcard").classList.toggle("flipped", session.flipped); }
+function grade(correct){ if(!session) return; session.results[session.cards[session.i].id]=correct; if(session.i<session.cards.length-1){ session.i++; renderCard(); } else endSession(); }
+function nextCard(){ if(session && session.i<session.cards.length-1){ session.i++; renderCard(); } else if(session) endSession(); }
+function prevCard(){ if(session && session.i>0){ session.i--; renderCard(); } }
+function exitSession(){ session=null; showView("study"); }
+function endSession(){
+  const total=session.cards.length; let good=0; Object.values(session.results).forEach(v=>{ if(v) good++; });
+  const graded=Object.keys(session.results).length; const pct=graded?Math.round(good/graded*100):0;
+  document.getElementById("endPct").textContent=pct;
+  let msg=pct>=90?"Outstanding — command-ready on these.":pct>=70?"Solid. A couple more passes and you're set.":pct>=40?"Getting there — worth another round.":"Early days. Run it again, you'll climb fast.";
+  document.getElementById("endLine").textContent=`${good} correct of ${graded} graded · ${total} cards total. ${msg}`;
+  const missed=session.cards.filter(c=>session.results[c.id]===false);
+  const eb=document.getElementById("endButtons"); eb.innerHTML="";
+  if(missed.length) eb.appendChild(mkBtn(`Retry ${missed.length} missed`,"btn btn-primary",()=>{
+    session={ cards:shuffle(missed.slice()), i:0, flipped:false, results:{} };
+    document.getElementById("view-end").classList.add("hidden");
+    document.getElementById("view-session").classList.remove("hidden"); renderCard();
+  }));
+  eb.appendChild(mkBtn("Study again","btn btn-dark",()=>startSession()));
+  eb.appendChild(mkBtn("Change selection","btn btn-ghost",()=>{ session=null; showView("study"); }));
+  document.getElementById("view-session").classList.add("hidden");
+  document.getElementById("view-end").classList.remove("hidden");
+}
+
+/* ---- Chapters tab (read-only canonical list + local cards editor) ---- */
+function renderManage(){
+  const ul=document.getElementById("staticList"); ul.innerHTML="";
+  if (isLoading){ ul.innerHTML=`<li><span class="spin"></span> &nbsp;Loading…</li>`; }
+  else if (canonicalChapters.length===0){ ul.innerHTML=`<li>No site chapters loaded.<span class="count">—</span></li>`; }
+  else canonicalChapters.forEach(ch=>{
+    const li=document.createElement("li"); li.innerHTML=`<span>${escapeHtml(ch.name)}</span><span class="count">${ch.cards.length} cards</span>`; ul.appendChild(li);
+  });
+
+  const box=document.getElementById("localCards"); box.innerHTML="";
+  if (localChapter.cards.length===0){ box.innerHTML=`<div class="muted" style="padding:4px 0;">No personal cards yet.</div>`; }
+  else localChapter.cards.forEach(card=>{
+    const qa=document.createElement("div"); qa.className="qa";
+    qa.innerHTML=`<div class="txt"><b>${escapeHtml(card.q)}</b><span class="ans">${escapeHtml(card.a)}</span></div><button class="btn btn-ghost btn-sm" onclick="deleteLocal('${card.id}')">✕</button>`;
+    box.appendChild(qa);
+  });
+}
+function addLocalCard(){
+  const q=document.getElementById("q-local").value.trim(); const a=document.getElementById("a-local").value.trim();
+  if(!q||!a){ alert("Both a question and an answer are needed."); return; }
+  localChapter.cards.push({ id:uid(), q, a }); saveLocal(); rebuildDeck(); renderManage();
+  document.getElementById("q-local").value=""; document.getElementById("a-local").value=""; document.getElementById("q-local").focus();
+}
+function deleteLocal(id){ localChapter.cards=localChapter.cards.filter(c=>c.id!==id); saveLocal(); rebuildDeck(); renderManage(); }
+function clearLocal(){ if(!localChapter.cards.length) return; if(!confirm("Remove all your personal cards on this device?")) return; localChapter.cards=[]; saveLocal(); rebuildDeck(); renderManage(); }
+function bulkLocal(){
+  const ta=document.getElementById("bulk-local"); const cards=parseBulk(ta.value);
+  if(!cards.length){ alert("Couldn't find any 'question | answer' pairs."); return; }
+  cards.forEach(c=>localChapter.cards.push({ id:uid(), q:c.q, a:c.a })); ta.value=""; saveLocal(); rebuildDeck(); renderManage();
+  alert(`Added ${cards.length} card(s) to your personal cards.`);
+}
+function parseBulk(raw){
+  const out=[]; const text=raw.replace(/\r/g,"");
+  if (/^\s*Q\s*[:\-]/im.test(text) && /^\s*A\s*[:\-]/im.test(text)){
+    const lines=text.split("\n"); let curQ=null;
+    for (const line of lines){ const qm=line.match(/^\s*Q\s*[:\-]\s*(.*)$/i); const am=line.match(/^\s*A\s*[:\-]\s*(.*)$/i); if(qm) curQ=qm[1].trim(); else if(am&&curQ){ out.push({q:curQ,a:am[1].trim()}); curQ=null; } }
+    if(out.length) return out.filter(c=>c.q&&c.a);
+  }
+  text.split("\n").forEach(line=>{ if(!line.trim()) return; let parts=line.includes("|")?line.split("|"):(line.includes("\t")?line.split("\t"):null); if(parts&&parts.length>=2){ const q=parts[0].trim(); const a=parts.slice(1).join("|").trim(); if(q&&a) out.push({q,a}); } });
+  return out;
+}
+
+function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function mkBtn(l,c,fn){ const b=document.createElement("button"); b.className=c; b.textContent=l; b.onclick=fn; return b; }
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+
+document.addEventListener("keydown", e=>{
+  if (document.getElementById("view-session").classList.contains("hidden")) return;
+  if (e.code==="Space"){ e.preventDefault(); flipCard(); }
+  else if (e.code==="ArrowRight"){ nextCard(); }
+  else if (e.code==="ArrowLeft"){ prevCard(); }
+  else if (e.key==="1"){ grade(false); }
+  else if (e.key==="2"){ grade(true); }
+});
+
+/* ---- install hint + service worker ---- */
+let deferredPrompt=null;
+window.addEventListener("beforeinstallprompt", e=>{ e.preventDefault(); deferredPrompt=e; showInstallHint("android"); });
+function isStandalone(){ return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone===true; }
+function showInstallHint(kind){
+  if (isStandalone()) return;
+  try { if (localStorage.getItem("atg_install_dismissed")==="1") return; } catch(e){}
+  const b=document.getElementById("installBanner"); const t=document.getElementById("installText");
+  if (kind==="android"){
+    t.textContent="Install this as an app: ";
+    t.appendChild(mkBtn("Add to home screen","btn btn-primary btn-sm",async()=>{ if(deferredPrompt){ deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null; dismissInstall(); }}));
+  } else {
+    t.innerHTML='To install: tap the <b>Share</b> icon, then <b>Add to Home Screen</b> — then it runs offline like an app.';
+  }
+  b.classList.remove("hidden");
+}
+function dismissInstall(){ document.getElementById("installBanner").classList.add("hidden"); try{ localStorage.setItem("atg_install_dismissed","1"); }catch(e){} }
+function maybeIosHint(){ const ua=navigator.userAgent||""; const iOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1); if(iOS&&!isStandalone()) showInstallHint("ios"); }
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")){ navigator.serviceWorker.register("sw.js").catch(()=>{}); }
+
+showView("study"); loadAll(); maybeIosHint();
+</script>
+</body>
+</html>
